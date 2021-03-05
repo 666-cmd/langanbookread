@@ -1,0 +1,49 @@
+USE bookread
+CREATE TABLE login(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	userphone VARCHAR(30),
+	username VARCHAR(50),
+	userpsd VARCHAR(30)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+SELECT * FROM login
+INSERT INTO login (userphone,username,userpsd) VALUES ('15856143817','听风也听雨','111111')
+
+
+CREATE TABLE bookshelf(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	bookid VARCHAR(30),
+	bookname VARCHAR(50),
+	bookauthor VARCHAR(30),
+	bookimg VARCHAR(100),
+	userphone VARCHAR(30)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+SELECT * FROM bookshelf
+
+
+CREATE TABLE shoucang(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	bookid VARCHAR(30),
+	bookname VARCHAR(50),
+	bookauthor VARCHAR(30),
+	bookimg VARCHAR(100),
+	userphone VARCHAR(30)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+SELECT * FROM shoucang
+
+
+CREATE TABLE historyfoot(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	bookid VARCHAR(30),
+	bookname VARCHAR(50),
+	bookauthor VARCHAR(30)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+SELECT * FROM shoucang
+
+CREATE TABLE pinglun(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	username VARCHAR(30),
+	userphone VARCHAR(50),
+	bookid VARCHAR(30),
+	pinlun VARCHAR(100)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+SELECT * FROM pinglun
